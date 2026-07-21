@@ -39,25 +39,75 @@ body {
   height: 360px;
   border: 1px solid #000;
   padding: 20px;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
   overflow-y: auto;
   background: #fafafa;
-  white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  white-space: normal;
 }
 
 /* messages */
 .msg {
-  margin-bottom: 14px;
+  max-width: 85%;
+  padding: 12px 14px;
+  border-radius: 10px;
   line-height: 1.5;
 }
 
 .msg.user {
-  color: #000;
+  align-self: flex-end;
+  background: #111;
+  color: #fff;
 }
 
 .msg.ai {
-  color: #666666;
+  align-self: flex-start;
+  background: #fff;
+  color: #333;
+  border: 1px solid #e5e5e5;
+}
+
+.msg.ai p {
+  margin-bottom: 8px;
+}
+
+.msg.ai p:last-child {
+  margin-bottom: 0;
+}
+
+.msg.ai ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.msg.ai code {
+  background: #f3f4f6;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.msg.ai pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+
+.msg.ai pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.msg.loading {
+  font-style: italic;
+  color: #666;
 }
 
 /* input row */
