@@ -38,6 +38,7 @@ chatForm.addEventListener("submit", async (e) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        model: "gpt-5.6",
         messages: [{ role: "user", content: message }],
       }),
     });
